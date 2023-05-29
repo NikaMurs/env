@@ -1,11 +1,9 @@
-// TODO: write code here
+document.addEventListener("DOMContentLoaded", () => {
+  const game = new Game(document.querySelector(".field"));
 
-// comment this to pass build
-const unusedVariable = "variable";
+  window.game = game;
 
-// for demonstration purpose only
-export default function demo(value) {
-  return `Demo: ${value}`;
-}
-
-console.log("app.js included");
+  setInterval(() => {
+    game.changePosition();
+  }, 1100);
+});
